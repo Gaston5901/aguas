@@ -153,8 +153,10 @@ body {
 @media (max-width: 600px) {
     body {
         padding: 0;
-        height: 100dvh;
+        height: auto;
+        min-height: 100dvh;
         font-size: 16px;
+        overflow-y: auto; /* Permite scroll en el body */
     }
 
     .envelope-container {
@@ -197,6 +199,12 @@ body {
     .full-screen-letter {
         padding: 18px 8px;
         border-radius: 12px;
+        height: 100dvh;
+        min-height: 100dvh;
+        max-height: 100dvh;
+        overflow-y: auto; /* Permite scroll dentro de la carta */
+        align-items: flex-start; /* El contenido inicia arriba */
+        justify-content: flex-start;
     }
 
     .full-screen-letter p {
