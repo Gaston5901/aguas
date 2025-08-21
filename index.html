@@ -3,101 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Para mi amor</title>
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&display=swap');
-        
-        body {
-            font-family: 'Dancing Script', cursive;
-            background-color: #ffe6f2; /* Rosa pastel */
-            color: #d83d71; /* Rosa oscuro */
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
-            text-align: center;
-            padding: 20px;
-        }
-
-        .contenedor {
-            background-color: #fff0f5; /* Blanco rosado */
-            padding: 40px 60px;
-            border-radius: 20px;
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-            animation: fadeIn 2s ease-in-out;
-        }
-
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(-20px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-
-        h1 {
-            font-size: 3.5em;
-            margin-bottom: 0.5em;
-        }
-
-        p {
-            font-size: 1.5em;
-            margin-bottom: 1.5em;
-        }
-
-        button {
-            font-family: inherit;
-            font-size: 1.2em;
-            padding: 15px 30px;
-            border: none;
-            border-radius: 50px;
-            background-color: #ff69b4; /* Rosa brillante */
-            color: white;
-            cursor: pointer;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            box-shadow: 0 5px 15px rgba(255, 105, 180, 0.4);
-        }
-
-        button:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 8px 20px rgba(255, 105, 180, 0.6);
-        }
-
-        #mensaje-secreto {
-            display: none;
-            margin-top: 2em;
-            font-size: 1.8em;
-            color: #ff1493; /* Rosa más oscuro */
-            animation: slideIn 1s ease-out;
-        }
-
-        @keyframes slideIn {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-    </style>
+    <title>Para Aguschii<33</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="contenedor">
-        <h1>HOLAA, mi amorcitoo</h1>
-        <p>
-            Solo quería recordarte lo mucho que significas para mí. Eres la persona más maravillosa que he conocido y cada día a tu lado es un regalo Aguschii.
-        </p>
-        <button id="boton-revelar">Haz clic para un mensaje especial</button>
-        <div id="mensaje-secreto">
-            <p>
-                Eres mi luz, mi risa, mi todo. <br> Siempre estaré aquí para ti. <br> Te amo con todo mi corazón mi niña bellaa mi Aguschii. ❤️
-            </p>
-        </div>
+    <div class="envelope-container" onclick="openEnvelope()">
+        <div class="message-overlay">Toca para abrir</div>
+        <div class="flap"></div>
+        <div class="envelope"></div>
+        <div class="heart-seal"></div>
     </div>
 
-    <script>
-        const botonRevelar = document.getElementById('boton-revelar');
-        const mensajeSecreto = document.getElementById('mensaje-secreto');
+    <div class="full-screen-letter" id="full-letter">
+        <p>
+            A mi persona favorita Aguschii,<br><br>
+            Cada día a tu lado es un regalo, una aventura que nunca quiero que termine. Eres la razón de mi sonrisa, la calma en mi caos y la chispa que ilumina mi vida. Tu amor me inspira y me hace querer ser una mejor versión de mí mismo.
+            <br><br>
+            Gracias por ser mi confidente, mi compañera y mi gran amor mi mividaa. Cada momento contigo está grabado en mi corazón.
+            <br><br>
+            Con todo mi amor de Gastón para Aguschii<br>
+            
+        </p>
+    </div>
 
-        botonRevelar.addEventListener('click', () => {
-            mensajeSecreto.style.display = 'block';
-            botonRevelar.style.display = 'none';
-        });
-    </script>
-
+    <script src="script.js"></script>
 </body>
 </html>
