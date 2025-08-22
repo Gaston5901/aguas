@@ -1,23 +1,53 @@
+function showEnvelope() {
+    const rosaContainer = document.getElementById('rosa-container');
+    const envelopeContainer = document.getElementById('envelope-container');
+    const body = document.body;
+
+    body.style.backgroundColor = '#f0e6f6';
+
+    rosaContainer.classList.add('hidden');
+    rosaContainer.style.opacity = '0';
+
+    envelopeContainer.classList.remove('hidden');
+    setTimeout(() => {
+        envelopeContainer.style.opacity = '1';
+    }, 10);
+}
+
 function openEnvelope() {
-    const envelopeContainer = document.querySelector('.envelope-container');
+    const envelopeContainer = document.getElementById('envelope-container');
     const fullLetter = document.getElementById('full-letter');
     const messageOverlay = document.querySelector('.message-overlay');
-    
-    // Solo si no está abierto
+
     if (!envelopeContainer.classList.contains('open')) {
-        // Ocultamos el mensaje de "Toca para abrir"
         messageOverlay.style.opacity = '0';
-        
-        // Añadimos la clase para la animación de rotura
         envelopeContainer.classList.add('open');
 
-        // Esperamos un momento para que termine la animación del corazón
         setTimeout(() => {
-            // Quitamos el sobre de la pantalla
             envelopeContainer.style.display = 'none';
-            // Mostramos la carta a pantalla completa y la hacemos visible
             fullLetter.style.visibility = 'visible';
             fullLetter.style.display = 'flex';
-        }, 1000); // 1000ms = 1 segundo, lo que dura la animación del corazón
+        }, 1000);
     }
+}
+
+// Nueva función para volver a la rosa
+function returnToRosa() {
+    const rosaContainer = document.getElementById('rosa-container');
+    const fullLetter = document.getElementById('full-letter');
+    const body = document.body;
+
+    // Cambia el fondo de vuelta al de la rosa
+    body.style.backgroundColor = '#0c0f1e';
+
+    // Oculta la carta y el sobre
+    fullLetter.style.display = 'none';
+    fullLetter.style.visibility = 'hidden';
+    document.getElementById('envelope-container').classList.add('hidden');
+
+    // Muestra el contenedor de la rosa
+    rosaContainer.classList.remove('hidden');
+    setTimeout(() => {
+        rosaContainer.style.opacity = '1';
+    }, 10);
 }
