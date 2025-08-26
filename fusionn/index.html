@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Para Aguschii & Mi Rosa</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="rosa-container" id="rosa-container">
+        <div class="glass">
+            <div class="glass-glow-base"></div>
+            <div class="flower">
+                <div class="petal p1"></div>
+                <div class="petal p2"></div>
+                <div class="petal p3"></div>
+                <div class="petal p4"></div>
+                <div class="petal p5"></div>
+                <div class="petal p6"></div>
+                <div class="petal p7"></div>
+                <div class="petal p8"></div>
+                <div class="stem">
+                    <div class="leaf l1"></div>
+                    <div class="leaf l2"></div>
+                </div>
+            </div>
+            <div class="falling-petal"></div>
+        </div>
+        <div class="go-to-envelope" onclick="showEnvelope()">Toca para ver la carta 💌</div>
+    </div>
+
+    <div class="envelope-container hidden" id="envelope-container" onclick="openEnvelope()">
+        <div class="message-overlay">Toca para abrir</div>
+        <div class="flap"></div>
+        <div class="envelope"></div>
+        <div class="heart-seal"></div>
+    </div>
+
+    <div class="full-screen-letter" id="full-letter">
+        <button class="return-button" onclick="returnToRosa()">Volver a la Rosa</button>
+        <p>
+            A mi persona favorita Aguschii,<br><br>
+            Cada día a tu lado es un regalo, una aventura que nunca quiero que termine. Eres la razón de mi sonrisa, la calma en mi caos y la chispa que ilumina mi vida. Tu amor me inspira y me hace querer ser una mejor versión de mí mismo.
+            <br><br>
+            Gracias por ser mi confidente, mi compañera y mi gran amor mi mividaa. Cada momento contigo está grabado en mi corazón.
+            <br><br>
+            Con todo mi amor de Gastón para Aguschii<br>
+        </p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

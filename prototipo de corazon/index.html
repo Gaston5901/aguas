@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Corazón Funcional</title>
+<style>
+body {
+display: flex;
+justify-content: center;
+align-items: center;
+height: 100vh;
+background-color: #000;
+margin: 0;
+}
+
+.heart {
+position: relative;
+width: 200px;
+height: 180px;
+background-color: transparent;
+border-radius: 50% 50% 0 0;
+transform: rotate(45deg);
+}
+
+.heart::before,
+.heart::after {
+content: '';
+position: absolute;
+width: 100%;
+height: 100%;
+background-color: transparent;
+border-radius: 50%;
+}
+
+.heart::before {
+top: 0;
+left: 0;
+border-left: 2px solid red;
+border-top: 2px solid red;
+}
+
+.heart::after {
+top: 0;
+left: 0;
+border-right: 2px solid red;
+border-bottom: 2px solid red;
+}
+</style>
+</head>
+
+<body>
+&lt;div class="heart"&gt;&lt;/div&gt;
+</body>
